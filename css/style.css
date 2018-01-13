@@ -1,8 +1,83 @@
+/*
+The main color:
+
+#248888
+#E6E6E6
+#E7475E
+#F0D879
+
+*/
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.b{
-    height: 600px;
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-break: 1.7;
+    background-color: #E6E6E6;
+    color: #555;
+}
+
+.main-body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url(../img/back.jpg);
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+}
+
+.players-contailer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 1000px;
+    font-size: 250%;
+    overflow: hidden;
+}
+
+.player1{
+    float: left;
+    width: 50%;
+    text-align: center;
+    background-color: #58B4AB;
+    padding: 100px;
+    color: #fff;
+}
+.player2{
+    float: right;
+    width: 50%;
+    text-align: center;
+    padding: 100px;
+}
+
+.player-name{
+
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.main-score{
+    font-size: 250%;
+    font-weight: 300;
+    color: #E96463;
+    padding-bottom: 200px;
+}
+
+.current-score-box{
+    background-color:#66638B;
+    width: 50%;
+    margin: 0 auto;
+    padding: 12px;
+    color: #fff;
+}
+
+.current-score-lebel{
+    font-size: 70%;
 }
