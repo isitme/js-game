@@ -46,7 +46,6 @@ body{
     float: left;
     width: 50%;
     text-align: center;
-    background-color: #58B4AB;
     padding: 100px;
     color: #fff;
 }
@@ -57,9 +56,17 @@ body{
     padding: 100px;
 }
 
+.active{
+    background-color: #f7f7f7;
+}
+
+.active .player-name{
+    font-weight: 300;
+}
+
 .player-name{
 
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 2px;
 }
 
@@ -71,7 +78,7 @@ body{
 }
 
 .current-score-box{
-    background-color:#66638B;
+    background-color:#34495e;
     width: 50%;
     margin: 0 auto;
     padding: 12px;
@@ -80,4 +87,64 @@ body{
 
 .current-score-lebel{
     font-size: 70%;
+}
+
+.btn{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    background: none;
+    transform: translateX(-120px);
+    border: none;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    color: #2c3e50;
+    transition: padding-left 0.3s;
+    width: 200px;
+    transition: padding-left 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:hover i{
+    margin-right: 10px;
+}
+
+.btn:hover{
+    padding-left: 10px;
+    color: black;
+}
+
+.new-game{
+    top: 50px;
+}
+
+.roll-dice{
+    top: 500px;
+}
+
+.hold{
+    top: 550px;
+}
+
+.icon{
+    color: #555;
+    font-size: 40px;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: -11px;
+    margin-right: 10px;
+    color: #E96463;
+}
+
+.dice{
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
