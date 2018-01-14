@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-break: 1.7;
+    background-color: #E6E6E6;
+    color: #555;
+}
+
+.main-body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) ,url(../img/back.jpg);
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+}
+
+.players-contailer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 1000px;
+    font-size: 250%;
+    overflow: hidden;
+}
+
+.player-0{
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 100px;
+    color: #fff;
+}
+.player-1{
+    float: right;
+    width: 50%;
+    text-align: center;
+    padding: 100px;
+}
+
+.active{
+    background-color: #f7f7f7;
+}
+
+.active .player-name{
+    font-weight: 300;
+}
+
+.player-name{
+
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.main-score{
+    font-size: 250%;
+    font-weight: 300;
+    color: #E96463;
+    padding-bottom: 200px;
+}
+
+.current-score-box{
+    background-color:#34495e;
+    width: 50%;
+    margin: 0 auto;
+    padding: 12px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 20px 60px 30px rgba(0, 0, 0, 0.205);
+}
+
+.current-score-lebel{
+    font-size: 70%;
+}
+
+.btn{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    background: none;
+    transform: translateX(-120px);
+    border: none;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    color: #2c3e50;
+    transition: padding-left 0.3s;
+    width: 200px;
+    transition: padding-left 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:hover i{
+    margin-right: 10px;
+}
+
+.btn:hover{
+    padding-left: 10px;
+    color: black;
+}
+
+.new-game{
+    top: 80px;
+}
+
+.roll-dice{
+    top: 480px;
+}
+
+.hold{
+    top: 530px;
+}
+
+.icon{
+    color: #555;
+    font-size: 40px;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: -11px;
+    margin-right: 10px;
+    color: #E96463;
+}
+
+.dice{
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    position: absolute;
+    box-shadow: 0px 10px 60px 20px rgba(0, 0, 0, 0.10);
+    height: 100px;
+}
