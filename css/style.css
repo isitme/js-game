@@ -1,13 +1,3 @@
-/*
-The main color:
-
-#248888
-#E6E6E6
-#E7475E
-#F0D879
-
-*/
-
 *{
     margin: 0;
     padding: 0;
@@ -42,14 +32,14 @@ body{
     overflow: hidden;
 }
 
-.player1{
+.player-0{
     float: left;
     width: 50%;
     text-align: center;
     padding: 100px;
     color: #fff;
 }
-.player2{
+.player-1{
     float: right;
     width: 50%;
     text-align: center;
@@ -83,6 +73,8 @@ body{
     margin: 0 auto;
     padding: 12px;
     color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 20px 60px 30px rgba(0, 0, 0, 0.205);
 }
 
 .current-score-lebel{
@@ -120,15 +112,15 @@ body{
 }
 
 .new-game{
-    top: 50px;
+    top: 80px;
 }
 
 .roll-dice{
-    top: 500px;
+    top: 480px;
 }
 
 .hold{
-    top: 550px;
+    top: 530px;
 }
 
 .icon{
@@ -143,8 +135,9 @@ body{
 
 .dice{
     left: 50%;
-    top: 100px;
+    top: 200px;
     transform: translateX(-50%);
     position: absolute;
-    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 10px 60px 20px rgba(0, 0, 0, 0.10);
+    height: 100px;
 }
