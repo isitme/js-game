@@ -46,7 +46,7 @@ document.querySelector(".hold").addEventListener("click", function(){
     roundScore = 0;
     document.querySelector("#score-" + activePlayer).textContent = score[activePlayer];
     // Check if win or Switch the player.
-    if(score[activePlayer] >= 10){
+    if(score[activePlayer] >= 30){
         document.querySelector("#score-" + activePlayer).innerHTML = "Winner";
         document.querySelector(".dice").style.display = "none";
         document.querySelector(".roll-dice").style.display = "none";
