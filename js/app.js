@@ -68,7 +68,8 @@ document.querySelector(".new-game").addEventListener("click", function(){
 function newgame (){
     document.querySelector(".current-score-0").textContent = "0";
     document.querySelector(".current-score-1").textContent = "0";
-    document.querySelector("#score-" + activePlayer).textContent = "0";
+    document.querySelector("#score-0").textContent = "0";
+    document.querySelector("#score-1").textContent = "0";
     document.querySelector(".dice").style.display = "none";
 
     document.querySelector(".player-0").classList.remove("active");
