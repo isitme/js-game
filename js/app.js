@@ -7,7 +7,7 @@ roundScore = 0;
 activePlayer = 0;
 
 document.querySelector(".dice").style.display = "none"; // This will not show the dice at first
-
+// The Roll Button
 document.querySelector(".roll-dice").addEventListener("click", function(){
 
     // This event will roll the dice with the image.
@@ -25,7 +25,7 @@ document.querySelector(".roll-dice").addEventListener("click", function(){
         
     }
     else{
-        // This will select he active player
+        // This will select the active player
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
         roundScore = 0;
         // This will make the current score 0 when the turn back to the player
@@ -38,5 +38,49 @@ document.querySelector(".roll-dice").addEventListener("click", function(){
         document.querySelector(".player-" + activePlayer).classList.add("active");
     }
 });
+// The HOLD Button
+document.querySelector(".hold").addEventListener("click", function(){
+    // Transfer the current score to Global score.
+    score[activePlayer] += roundScore;
+    roundScore = 0;
+    document.querySelector("#score-" + activePlayer).textContent = score[activePlayer];
+    // Check if win or Switch the player.
+    if(score[activePlayer] >= 10){
+        document.querySelector("#score-" + activePlayer).innerHTML = "Winner";
+        document.querySelector(".dice").style.display = "none";
+    }
+    else{
+        more();   
+    }
+});
 
+// The NEW-GAME Button
+document.querySelector(".new-game").addEventListener("click", function(){
+    newgame();
+})
 
+function newgame (){
+    document.querySelector(".current-score-0").textContent = "0";
+    document.querySelector(".current-score-1").textContent = "0";
+    document.querySelector("#score-" + activePlayer).textContent = "0";
+    document.querySelector(".dice").style.display = "none";
+
+    document.querySelector(".player-0").classList.remove("active");
+    document.querySelector(".player-1").classList.remove("active");
+
+    document.querySelector(".player-" + activePlayer).classList.add("active");
+}
+
+// This is Function will Switch the player
+function more (){
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    document.querySelector(".dice").style.display = "none";
+    document.querySelector(".player-0").classList.remove("active");
+    document.querySelector(".player-1").classList.remove("active");
+    // It will bring back the "active" class to the active player
+    document.querySelector(".player-" + activePlayer).classList.add("active");
+    document.querySelector(".current-score-0").textContent = "0";
+    document.querySelector(".current-score-1").textContent = "0";    
+}
+
+// When the global Score will be more or equal to 10
