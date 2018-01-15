@@ -12,6 +12,7 @@ document.querySelector(".roll-dice").addEventListener("click", function(){
 
     // This event will roll the dice with the image.
     dice = Math.floor(Math.random() * 6) + 1;
+
     
     var diceDom = document.querySelector(".dice");
     diceDom.style.display = "block";
@@ -48,6 +49,11 @@ document.querySelector(".hold").addEventListener("click", function(){
     if(score[activePlayer] >= 10){
         document.querySelector("#score-" + activePlayer).innerHTML = "Winner";
         document.querySelector(".dice").style.display = "none";
+        document.querySelector(".roll-dice").style.display = "none";
+        document.querySelector(".hold").style.display = "none";
+        document.querySelector(".player-" + activePlayer).classList.add("active");
+        document.querySelector(".current-score-0").textContent = "0";
+        document.querySelector(".current-score-1").textContent = "0";
     }
     else{
         more();   
@@ -69,6 +75,10 @@ function newgame (){
     document.querySelector(".player-1").classList.remove("active");
 
     document.querySelector(".player-" + activePlayer).classList.add("active");
+
+    document.querySelector(".roll-dice").style.display = "inline-block";
+    document.querySelector(".hold").style.display = "inline-block";
+    roundScore = 0;
 }
 
 // This is Function will Switch the player
@@ -82,5 +92,3 @@ function more (){
     document.querySelector(".current-score-0").textContent = "0";
     document.querySelector(".current-score-1").textContent = "0";    
 }
-
-// When the global Score will be more or equal to 10
